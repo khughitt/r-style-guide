@@ -8,12 +8,14 @@ Overview
 --------
 
 * [Identifiers](#identifiers): var_name, fxn_name, and ClassName
-* [White-space](#whitespace): Indent = 4 spaces
+* [Indentation](#indentation): 4 spaces
+* [Spacing](#spacing): foo = bar, x + y, fxn(x, y)
 * [Layout](#layout): Don't try and cram too many things on one line.
 * [Line-width](#linewidth): 80 characters
 * [Assignment](#assignment): "=" and not "<-"
 * [Semicolons](#semicolons): Don't use them.
 * [File names](#filenames): .r, .rmd, etc.
+* [Everything else...](#misc): don't attach()
 
 <a id="identifiers">Identifiers</a>
 -----------------------------------
@@ -26,10 +28,16 @@ Same as above...
 ### Class names
 CamelCase -- No underscores, first letter of each word capitalized.
 
-<a id="whitespace">White-space</a>
+### Constants
+R doesn't have support for constants, but sometimes I like to pretend that it
+does and THOSE_IDENTIFIERS_LOOK_LIKE_THIS.
+
+<a id="indentation">Indentation</a>
 ----------------------------------
-### Indentation
 Each level of indentation should be separated by four spaces. Never use tabs.
+
+<a href='spacing'>Spacing</a>
+---------------------------
 
 ### Assignment
 Include one space before and after the equality sign.
@@ -88,6 +96,22 @@ foo(x,y)
 foo(x , y)
 ```
 
+### Math expression
+Include spaces before and after math operators.
+
+```
+# Good
+(5 + 10) / 2.3 * pi
+
+# Bad
+(5+10)/2.3*pi
+```
+
+<a href='layout'>Layout</a>
+---------------------------
+Below are other general layout issues not discussed in the spacing section
+above.
+
 ### Aligning variable assignments
 Feel free to add extra indentation during indentifier assignment, when it
 increases readability (PEP8 differs here).
@@ -101,11 +125,6 @@ foobar = 2.9
 x      = 5.3
 foobar = 2.9
 ```
-
-<a href='layout'>Layout</a>
----------------------------
-Some more things not discussed in the whitespace section above.
-
 ### Conditional statements
 If statements should always include brackets, the first of which should appear
 on the same line. If an else statement is used, it should have a bracket on
@@ -169,7 +188,7 @@ x <- 5
 -----------------------------------
 Do not use semicolons at the end of statements.
 
-```r
+```
 # Good
 x = 5
 
@@ -181,3 +200,15 @@ x = 5;
 ---------------------------------
 Try and stick to lowercase filenames (.r, .rmd, .rdata, etc) and not their
 capitalized counterparts (.R, .Rmd, .Rdata, etc).
+
+<a href='misc'>Everything else...</a>
+-------------------------------------
+### Attach
+Don't use attach() -- it can make the code less clear.
+
+### .Rprofile
+Don't use function aliases in your profile: they will reduce the portability
+of your code.
+
+Do specify (in comments, etc) any other profile tweaks which may affect the
+output of your code.
