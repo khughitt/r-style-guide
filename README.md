@@ -54,6 +54,7 @@ foo_bar = function(x=TRUE, y=1.5) {
 foo_bar = function(x = FALSE, y= 1.4) {
     ...
 }
+```
 
 **Brackets and Parens**
 Always include space between expressions and brackets; Add a single space
