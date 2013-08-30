@@ -7,16 +7,16 @@ The *structure* of this guide is based, in part, on [Google's style guide for R 
 Overview
 --------
 
-* [Identifiers](#identifiers): var_name, fxn_name, and ClassName
+* [Identifiers](#identifiers): var_name, fxn_name, ClassName
 * [Indentation](#indentation): 4 spaces
-* [Spacing](#spacing): foo = bar, x + y, fxn(x, y)
-* [Layout](#layout): Don't try and cram too many things on one line.
+* [Spacing](#spacing)
+* [Layout](#layout)
 * [Line-width](#linewidth): 80 characters
 * [Assignment](#assignment): "=" and not "<-"
-* [Semicolons](#semicolons): Don't use them.
-* [File names](#filenames): .r, .rmd, etc.
-* [Comments](#comments): Include a space after the #.
-* [Everything else...](#misc): don't attach()
+* [Semicolons](#semicolons): Don't.
+* [File names](#filenames)
+* [Comments](#comments)
+* [Everything else...](#misc)
 
 <a id="identifiers">Identifiers</a>
 -----------------------------------
