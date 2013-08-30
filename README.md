@@ -15,6 +15,7 @@ Overview
 * [Assignment](#assignment): "=" and not "<-"
 * [Semicolons](#semicolons): Don't use them.
 * [File names](#filenames): .r, .rmd, etc.
+* [Comments](#comments): Include a space after the #.
 * [Everything else...](#misc): don't attach()
 
 <a id="identifiers">Identifiers</a>
@@ -154,6 +155,11 @@ else
 Do not use them.
 
 ```
+# Good
+if (x) {
+    print('hi')
+}
+
 # Bad
 if (x) print('hi')
 if (x) { print('hi') }
@@ -200,6 +206,81 @@ x = 5;
 ---------------------------------
 Try and stick to lowercase filenames (.r, .rmd, .rdata, etc) and not their
 capitalized counterparts (.R, .Rmd, .Rdata, etc).
+
+<a href='comments'>Comments</a>
+### Inline comments
+Inline comments should always include a space after the pound sign.
+
+```
+# Good
+x = 5 # Also Good
+
+# You can also break up longer inline comments over multiple lines to make it
+# more readable, and always do so when it would excede the 80-character limit
+# otherwise.
+
+#Bad
+x = 5# Really bad
+```
+### File comments
+File comments are strongly encouraged, and should include some information
+about the contents of the file, the author(s) of the file, along with
+contact information and possible external references.
+
+Example file comment:
+
+```
+#
+# Short Description
+# Author: [Keith Hughitt](khughitt@umd.edu)
+#  
+# A longer description goes here. This may be a couple sentences, or a several
+# paragraphs, depending on how complex the code is.
+#
+# See Also:
+#   1. http://www.r-project.org/
+#   2. https://github.com/khughitt/r-style-guide
+#
+```
+
+### Function comments
+I think [Google's description of R function comments](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml#comments)
+is pretty good, and is fairly close to Python docstring comments combined 
+geared towards parsing by [Sphinx](http://sphinx-doc.org/tutorial.html).
+
+At a minimum, the **Arguments** and *Returns** fields should be included.
+Additional fields which can be included when relevant include "Examples", 
+"References" and "See Also".
+
+Example function comment:
+
+```
+ones = function(m, n) {
+    # Generates an mxn matrix filled with ones.
+    #
+    # A Longer description spanning multiple lines can be placed here when
+    # appropriate...
+    #
+    # Parameters:
+    # -----------
+    # m: Number of rows to include
+    # n: Number of columns to include
+    #
+    # Examples:
+    # ---------
+    # x = ones(5, 5)
+    #
+    # See Also:
+    # ---------
+    # 1. http://docs.scipy.org/doc/numpy/reference/generated/numpy.ones.html
+    # 2. http://rss.acs.unt.edu/Rdoc/library/calibrate/html/ones.html
+    #
+    # Returns:
+    # --------
+    # An mxn matrix filled with ones.
+    return(matrix(1, m, n))
+}
+```
 
 <a href='misc'>Everything else...</a>
 -------------------------------------
