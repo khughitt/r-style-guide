@@ -32,7 +32,7 @@ Each level of indentation should be separated by four spaces. Never use tabs.
 **Assignment**
 Include one space before and after the equality sign.
 
-```r
+```
 # Good
 foo_bar = 5.9
 
@@ -44,7 +44,7 @@ foo_bar=5.9
 Default parameters for functions, on the other hand, should have no spacing 
 before or after the equality sign.
 
-```r
+```
 #Good
 foo_bar = function(x=TRUE, y=1.5) {
     ...
@@ -59,7 +59,7 @@ foo_bar = function(x = FALSE, y= 1.4) {
 Always include space between expressions and brackets; Add a single space
 on outside of parentheses, but no extra space on the inside.
 
-```r
+```
 # Good
 if (x == 5) {
     ...
@@ -76,7 +76,7 @@ if( x == 5 ){
 **Commas**
 Add one space after each comma.
 
-```r
+```
 # Good
 foo(x, y)
 
@@ -89,7 +89,7 @@ foo(x , y)
 Feel free to add extra indentation during indentifier assignment, when it
 increases readability (PEP8 differs here).
 
-```r
+```
 # Good
 x = 5.3
 foo = 'bar'
