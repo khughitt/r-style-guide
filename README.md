@@ -261,22 +261,24 @@ ones = function(m, n) {
     # A Longer description spanning multiple lines can be placed here when
     # appropriate...
     #
-    # Parameters:
-    # -----------
-    # m: Number of rows to include
-    # n: Number of columns to include
+    # Parameters
+    # ----------
+    # m: numeric
+    #   Number of rows to include
+    # n: numeric
+    #   Number of columns to include
     #
-    # Examples:
-    # ---------
+    # Examples
+    # --------
     # x = ones(5, 5)
     #
-    # See Also:
-    # ---------
+    # See Also
+    # --------
     # 1. http://docs.scipy.org/doc/numpy/reference/generated/numpy.ones.html
     # 2. http://rss.acs.unt.edu/Rdoc/library/calibrate/html/ones.html
     #
-    # Returns:
-    # --------
+    # Returns
+    # -------
     # An mxn matrix filled with ones.
     return(matrix(1, m, n))
 }
