@@ -21,7 +21,16 @@ Overview
 <a id="identifiers">Identifiers</a>
 -----------------------------------
 ### Variable names
-Lowercase characters with words separated by underscores, e.g. "my_var".
+Lowercase characters with words separated by underscores. For all identifiers,
+descriptive names should be used when possible.
+
+```
+# Good
+read_length = 50
+
+# Bad
+readLength = 50
+x = 50
 
 ### Function names
 Same as above...
@@ -248,7 +257,7 @@ I think [Google's description of R function comments](http://google-styleguide.g
 is pretty good, and is fairly close to Python docstring comments combined 
 geared towards parsing by [Sphinx](http://sphinx-doc.org/tutorial.html).
 
-At a minimum, the **Arguments** and *Returns** fields should be included.
+At a minimum, the **Arguments** and **Returns** fields should be included.
 Additional fields which can be included when relevant include "Examples", 
 "References" and "See Also".
 
