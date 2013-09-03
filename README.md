@@ -31,6 +31,7 @@ read_length = 50
 # Bad
 readLength = 50
 x = 50
+```
 
 ### Function names
 Same as above...
@@ -43,11 +44,11 @@ R doesn't have support for constants, but sometimes I like to pretend that it
 does and THOSE_IDENTIFIERS_LOOK_LIKE_THIS.
 
 <a id="indentation">Indentation</a>
-----------------------------------
+-----------------------------------
 Each level of indentation should be separated by four spaces. Never use tabs.
 
 <a href='spacing'>Spacing</a>
----------------------------
+----------------------------
 
 ### Assignment
 Include one space before and after the equality sign.
@@ -178,7 +179,7 @@ foo = function() { print('bye') }
 
 
 <a href='linewidth'>Line Width</a>
------------------------------------
+----------------------------------
 Lines should be 80 characters or less.
 
 ```
